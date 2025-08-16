@@ -30,10 +30,19 @@ function Personajes() {
             </Link>
         </div>
         <div className='grid grid-cols-2 sm:grid-cols-3 gap-5 mt-6'>
-            {personajes.map((pj) => (
-            <div key={pj.id} className="">
-                {pj.name}
-            </div>
+            {personajes.map((pj, index) => (
+            <button key={pj.id} className="border-t-indigo-950 bg-gray-600 rounded-bl-3xl rounded-tr-3xl">
+                  <div>
+                    <img 
+                            src={`https://rickandmortyapi.com/api/character/avatar/${index+1}.jpeg`}
+                            alt={pj.name}
+                            className="w-40 h-40 mt-3 mx-auto relative z-10 filter contrast-125 brightness-110 drop-shadow-lg group-hover:drop-shadow-2xl transition-all duration-300"
+                          />
+                  </div>
+                  <div>
+                    <h2 className="text-2xl font-extralight text-white">{pj.name}</h2>
+                  </div>
+            </button>
             ))}
         </div>
     </div>
