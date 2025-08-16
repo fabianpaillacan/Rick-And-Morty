@@ -17,6 +17,7 @@ function Home() {
         <div className='min-h-screen flex items-center justify-center'>
           <Link
           to="/personajes"
+          className="bg-emerald-950 text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-900 transition-colors absolute z-10"
           >
             Ver Personajes
           </Link>
