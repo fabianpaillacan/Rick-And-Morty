@@ -5,6 +5,7 @@ import './index.css'
 //import App from './App.jsx'
 import JsonFormat from './pages/formato.jsx';
 import Home from './pages/home.jsx';
+import Personajes from './pages/personajes.jsx';
 
 const routes = [
   {
@@ -14,6 +15,10 @@ const routes = [
   {
     path: "/formato",
     element: <JsonFormat />,
+  },
+  {
+    path: "/personajes",
+    element: <Personajes />
   }
 ];
 
