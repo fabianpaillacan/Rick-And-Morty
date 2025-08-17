@@ -6,6 +6,8 @@ import './index.css'
 import JsonFormat from './pages/formato.jsx';
 import Home from './pages/home.jsx';
 import Personajes from './pages/personajes.jsx';
+import Personaje from './pages/pjIndividual.jsx';
+import Mundos from './pages/mundos.jsx';
 
 const routes = [
   {
@@ -19,6 +21,14 @@ const routes = [
   {
     path: "/personajes",
     element: <Personajes />
+  },
+  {
+    path: "/personajes/:id",
+    element: <Personaje />
+  },
+  {
+    path: "/mundos",
+    element: <Mundos />
   }
 ];
 
