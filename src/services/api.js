@@ -1,15 +1,15 @@
-const URL = "https://rickandmortyapi.com/api/character/?page=1"; //puede ser page=1, 2,3,4,5,6 etc
-const LOCATION = "https://rickandmortyapi.com/api/location?page=1";
+const BASE_URL = "https://rickandmortyapi.com/api";
 
-
-export async function getDatos() {
-    const respuesta = await fetch(URL);
+export async function getDatos(page = 1) {
+    const url = `${BASE_URL}/character/?page=${page}`;
+    const respuesta = await fetch(url);
     if (!respuesta.ok) throw new Error('Error al obtener datos');
     return respuesta.json();
   }
 
-export async function getLocations() {
-  const ubicaciones = await fetch(LOCATION);
+export async function getLocations(page = 1) {
+  const url = `${BASE_URL}/location?page=${page}`;
+  const ubicaciones = await fetch(url);
   if (!ubicaciones.ok) throw new Error('Error al obtener datos');
   return ubicaciones.json();
 }
