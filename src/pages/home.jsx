@@ -14,12 +14,18 @@ function Home() {
              Ver JSON
             </Link>
         </div>
-        <div className='min-h-screen flex items-center justify-center'>
+        <div className='min-h-screen flex items-center justify-center flex-grow'>
           <Link
           to="/personajes"
-          className="bg-emerald-950 text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-900 transition-colors absolute z-10"
+          className="bg-emerald-950 text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-900 transition-colors"
           >
             Ver Personajes
+          </Link>
+          <Link
+          to="/mundos"
+          className="bg-emerald-950 text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-900 transition-colors ml-4"
+          >
+            Ver mundos
           </Link>
         </div>
     </div>
