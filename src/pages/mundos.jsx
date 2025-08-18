@@ -13,13 +13,15 @@ function Mundos(){
 
     const cargarMundos = async () => {
         try {
-            const data = await getLocations();
-            setMundos(data.results); // Los datos vienen en data.results
-            setLoading(false);
-        } catch (error) {
-            console.error('Error cargando mundos:', error);
-            setLoading(false);
-        } 
+            for (let page = 1; page <= 7; page++) {
+              const data = await getLocations(page);
+              setMundos(prev => [...prev, ...data.results]); // Actualización incremental
+              setLoading(false);
+            }
+          } catch (error) {
+            console.error("Error cargando página:", page, error);
+            setLoading(false)
+          }
     };
 
     if (loading) {
